@@ -1,0 +1,125 @@
+//1
+2018-09-15 14:34:01.856000000 5368 00000 [5]:  [json] CORE Outgoing: textMessage
+--Core---A
+2018-09-15 14:34:01.554727000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM NotificationDataBlob as rim::gme::MessageOut[id=780931648 size=126 to=BBM_P2P/
+2018-09-15 14:34:01.554979000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931648 size=126 to=BBM_P2P/
+
+--Core---B
+2018-09-15 14:34:02.216776000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM GroupMessage as rim::gme::MessageOut[id=780931650 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:02.216794000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931650 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+
+//2
+2018-09-15 14:34:04.988000000 5368 00000 [5]:  [json] CORE Outgoing: textMessage
+--Core--A
+2018-09-15 14:34:04.688044000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM NotificationDataBlob as rim::gme::MessageOut[id=780931651 size=126 to=BBM_P2P/
+2018-09-15 14:34:04.688080000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931651 size=126 to=BBM_P2P/
+
+--Core--B
+2018-09-15 14:34:05.522401000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM GroupMessage as rim::gme::MessageOut[id=780931653 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:05.522414000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931653 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+
+
+No Plaform Logs before 2018-09-15 14:34:07.886899000
+
+//3
+2018-09-15 14:34:08.690000000 5368 00000 [5]:  [json] CORE Outgoing: textMessage
+--Core--A
+2018-09-15 14:34:08.664308000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM NotificationDataBlob as rim::gme::MessageOut[id=780931654 size=126 to=BBM_P2P/
+2018-09-15 14:34:08.664345000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931654 size=126 to=BBM_P2P/
+
+--Core--B = 780931656
+2018-09-15 14:34:09.211038000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM GroupMessage as rim::gme::MessageOut[id=780931656 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:09.211048000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931656 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:14.744327000 5368 30479 [4]: rim::gme::RateLimiter[out=1/9 queued=0]: Shrunk window size by one slot on timeout of messageId=780931656
+2018-09-15 14:34:20.473799000 5368 30479 [5]: bbm::core::ConversationManager: Applied bbm::data::TextMessage::StateUpdate[id=219760 state=Sent full] from rim::gme::DeliveryInfo[780931656 Acked [dc5e288c]]
+
+--Platform--A = 780931654
+2018-09-15 14:34:08.664473000 5368 30479 [5]: alaska_transport_queue_util.c(303) enqueue outgoingQ -> msg[type=msg_out bytes=126 uMsgId=780931654] q[size=1 bytes=126]
+2018-09-15 14:34:08.664597000 5368 29999 [5]: alaska_transport.c(4088) snd: msg[retryCount=0 reqAck=0 reqDlv=0 uMsgId=780931654]
+2018-09-15 14:34:08.664613000 5368 29999 [5]: enhanced_msg_util.c(1044) Send LIST: [appType=2.4 addr=BBM_P2P quals=55772f59,5580c9be,5583822f,56abafb4,56df8330... uMsgId=780931654]
+2018-09-15 14:34:08.664795000 5368 29999 [5]: sipservice_logger.h(26)     pjsua_im.h IM send message [call-ID=hpCJ7.zdN6 msgId=780931654 uMsgId=780931654]
+2018-09-15 14:34:08.664978000 5368 29999 [5]: alaska_transport_queue_util.c(303) dequeue outgoingQ -> msg[type=msg_out bytes=126 uMsgId=780931654] q[size=0 bytes=0]
+
+
+--Platform--B = 780931656
+2018-09-15 14:34:09.211063000 5368 30479 [5]: alaska_transport_queue_util.c(303) enqueue outgoingQ -> msg[type=msg_out bytes=222 uMsgId=780931656] q[size=1 bytes=222]
+2018-09-15 14:34:09.211536000 5368 29999 [5]: sipservice_logger.h(26)     pjsua_im.h IM send message [call-ID=K8-xRA-lJG msgId=780931656 uMsgId=780931656]
+2018-09-15 14:34:09.481558000 5368 93955 [5]: sipmgr.cpp(541) Message Response [status=100 uMsgId=780931656]
+2018-09-15 14:34:09.621740000 5368 93955 [5]: sipmgr.cpp(541) Message Response [status=200 uMsgId=780931656]
+2018-09-15 14:34:09.621748000 5368 93955 [5]: enhanced_msg_handler.c(873) Received ACK uMsgId=780931656
+2018-09-15 14:34:09.621766000 5368 93955 [5]: alaska_transport_queue_util.c(303) dequeue outgoingQ -> msg[type=msg_out bytes=222 uMsgId=780931656] q[size=0 bytes=0]
+2018-09-15 14:34:11.933805000 5368 93955 [5]: enhanced_msg_util.c(845) BBMPayload[0] [type=DLV err=0 timestamp=1536993251866 disp=delivered uMsgId=780931656]
+2018-09-15 14:37:14.798447000 5368 93955 [5]: enhanced_msg_util.c(905) BBMPayload[0] [type=ACK timestamp=1536993434481 uMsgId=780931656]
+
+//4
+2018-09-15 14:34:11.742000000 5368 00000 [5]:  [json] CORE Outgoing: textMessage
+--Core--A = 780931657780931657
+2018-09-15 14:34:11.567352000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM NotificationDataBlob as rim::gme::MessageOut[id=780931657 size=126 to=BBM_P2P/
+2018-09-15 14:34:11.567384000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931657
+
+--Core-- B = 780931659
+2018-09-15 14:34:12.143602000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM GroupMessage as rim::gme::MessageOut[id=780931659 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:12.143614000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931659 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:29.475495000 5368 30479 [5]: bbm::core::ConversationManager: Applied bbm::data::TextMessage::StateUpdate[id=219761 state=Sent full] from rim::gme::DeliveryInfo[780931659 Acked [dc5e288c]]
+
+--Platform- A = 780931657
+2018-09-15 14:34:11.567474000 5368 30479 [5]: alaska_transport_queue_util.c(303) enqueue outgoingQ -> msg[type=msg_out bytes=126 uMsgId=780931657] q[size=1 bytes=126]
+2018-09-15 14:34:11.567352000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM NotificationDataBlob as rim::gme::MessageOut[id=780931657 size=126 to=BBM_P2P/
+2018-09-15 14:34:11.567384000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931657 size=126 to=BBM_P2P/[55772f59,
+
+--Platform-- B = 780931659
+2018-09-15 14:34:12.143628000 5368 30479 [5]: alaska_transport_queue_util.c(303) enqueue outgoingQ -> msg[type=msg_out bytes=222 uMsgId=780931659] q[size=1 bytes=222]
+2018-09-15 14:34:12.143602000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM GroupMessage as rim::gme::MessageOut[id=780931659 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:12.143614000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931659 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:29.001961000 5368 93955 [5]: enhanced_msg_util.c(845) BBMPayload[0] [type=DLV err=0 timestamp=1536993268869 disp=delivered uMsgId=780931659]
+2018-09-15 14:42:19.011034000 5368 30479 [5]: alaska_transport.c(3701) rd: msg[type=dlv_in status=2 error=0 dest=1 uMsgId=780931659]
+
+
+//5
+2018-09-15 14:34:15.110000000 5368 00000 [5]:  [json] CORE Outgoing: textMessage
+--Core--
+2018-09-15 14:34:15.560272000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM GroupMessage as rim::gme::MessageOut[id=780931662 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:15.560284000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931662 size=222 to=BBM_P2P/dc5e288c di=All 72:4]
+//NO Delivery Status in BBMCOre
+
+--Platform--
+2018-09-15 14:34:15.560297000 5368 30479 [5]: alaska_transport_queue_util.c(303) enqueue outgoingQ -> msg[type=msg_out bytes=222 uMsgId=780931662] q[size=1 bytes=222]
+2018-09-15 14:34:15.821883000 5368 93955 [5]: sipmgr.cpp(541) Message Response [status=200 uMsgId=780931662]
+2018-09-15 14:34:23.937892000 5368 93955 [5]: enhanced_msg_util.c(845) BBMPayload[0] [type=DLV err=0 timestamp=1536993263870 disp=delivered uMsgId=780931662]
+2018-09-15 14:34:23.937913000 5368 93955 [5]: enhanced_msg_handler.c(641) Sending ACK for async DLV
+2018-09-15 14:34:23.937919000 5368 93955 [5]: enhanced_msg_util.c(905) BBMPayload[0] [type=ACK timestamp=1536993263870 uMsgId=780931662]
+
+2018-09-15 14:43:23.888299000 5368 93955 [5]: sipservice_logger.h(26)     pjsua_im.h IM sends response [call-id=1Jj1J sent=0 msgId=780931662 uMsgId=780931662]
+
+//6
+2018-09-15 14:34:38.685000000 5368 00000 [5]:  [json] CORE Outgoing: textMessageWithContext type = DanaLuckyMoneyUpdate
+--Core---
+2018-09-15 14:34:42.149967000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM NotificationDataBlob as rim::gme::MessageOut[id=780931665 size=126 to=BBM_P2P/
+2018-09-15 14:34:42.149997000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931665 size=126 to=BBM_P2P/
+--Platform--
+2018-09-15 14:34:42.150084000 5368 30479 [5]: alaska_transport_queue_util.c(303) enqueue outgoingQ -> msg[type=msg_out bytes=126 uMsgId=780931665] q[size=1 bytes=126]
+
+//7
+2018-09-15 14:34:48.377000000 5368 00000 [5]:  [json] CORE Outgoing: textMessage
+
+---Core--780931667
+2018-09-15 14:34:48.130609000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM GroupMessage as rim::gme::MessageOut[id=780931667 size=581 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:48.130621000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931667 size=581 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:51.736871000 5368 30479 [5]: bbm::core::ConversationManager: Applied bbm::data::TextMessage::StateUpdate[id=219765 state=Sent full] from rim::gme::DeliveryInfo[780931667 Acked [dc5e288c]]
+
+--Core--780931669
+2018-09-15 14:34:48.806366000 5368 30479 [5]: bbm::gme::RimImSender: Sending RIM_IM GroupMessage as rim::gme::MessageOut[id=780931669 size=224 to=BBM_P2P/dc5e288c di=All 72:4]
+2018-09-15 14:34:48.806378000 5368 30479 [5]: bbm::alaska::Transport: Sending RIM_IM rim::gme::MessageOut[id=780931669 size=224 to=BBM_P2P/dc5e288c di=All 72:4]
+
+---Platform--780931667
+2018-09-15 14:34:48.130635000 5368 30479 [5]: alaska_transport_queue_util.c(303) enqueue outgoingQ -> msg[type=msg_out bytes=581 uMsgId=780931667] q[size=1 bytes=581]
+2018-09-15 14:34:48.414243000 5368 93955 [5]: sipmgr.cpp(541) Message Response [status=200 uMsgId=780931667]
+2018-09-15 14:34:48.414252000 5368 93955 [5]: enhanced_msg_handler.c(873) Received ACK uMsgId=780931667
+2018-09-15 14:43:23.888260000 5368 93955 [5]: enhanced_msg_util.c(905) BBMPayload[0] [type=ACK timestamp=1536993803743 uMsgId=780931662]
+
+
+--Platform--780931669
+2018-09-15 14:34:48.806387000 5368 30479 [5]: alaska_transport_queue_util.c(303) enqueue outgoingQ -> msg[type=msg_out bytes=224 uMsgId=780931669] q[size=1 bytes=224]
+2018-09-15 14:34:49.034339000 5368 93955 [5]: sipmgr.cpp(541) Message Response [status=200 uMsgId=780931669]
+2018-09-15 14:34:49.034346000 5368 93955 [5]: enhanced_msg_handler.c(873) Received ACK uMsgId=780931669
+2018-09-15 14:43:23.888546000 5368 93955 [5]: enhanced_msg_util.c(905) BBMPayload[0] [type=ACK timestamp=1536993803754 uMsgId=780931669]
